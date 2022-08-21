@@ -17,6 +17,7 @@ Usage:
 - I will give info on how to connect to the cluster
 - Create a namespace for yourself and make sure to create all resources in your own namespace such that you do not impact each other.
 - Use the following link to open the repo in gitpod:
+
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/datamindedbe/kubernetes_academy_course)
 
 ## Content
