@@ -3,6 +3,8 @@
 This repository contains the exercises used in the kubernetes course.
 It has a folder for each exercise and the solution is available in a separate directory.
 
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/datamindedbe/kubernetes_academy_course)
+
 ## Content
 
 - Exercise 1: using pod spec
