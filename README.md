@@ -3,6 +3,20 @@
 This repository contains the exercises used in the kubernetes course.
 It has a folder for each exercise and the solution is available in a separate directory.
 
+## Running tests locally
+
+I can recommend microk8s to simulate a k8s cluster on your local machine. 
+More info on installing it can be found here: https://microk8s.io/docs/getting-started
+
+## Using a realworld cluster
+
+Unfortunately microk8s cannot be installed on a docker container, so it is also not available through gitpod.
+As a backup I created a kubernetes cluster in my aws account, which we can use for this session.
+
+Usage:
+- I will give info on how to connect to the cluster
+- Create a namespace for yourself and make sure to create all resources in your own namespace such that you do not impact each other.
+
 ## Content
 
 - Exercise 1: using pod spec

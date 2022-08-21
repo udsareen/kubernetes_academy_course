@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: nginxdaemonset
+spec:
+  selector:
+    matchLabels:
+      app: nginxdaemonset
+  template:
+    metadata:
+      labels:
+        app: nginxdaemonset
+    spec:
+      containers:
+        - image: nginx:1.18-alpine
+          name: nginx
+          volumeMounts:
+            - name: logs
+              mountPath: /var/log/nginx
+      volumes:
+        - name: logs
+          hostPath:
+            path: /tmp/daemonset/nginx-logs
+            type: DirectoryOrCreate
