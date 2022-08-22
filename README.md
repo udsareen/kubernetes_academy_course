@@ -19,13 +19,14 @@ Usage:
 - I will give info on how to connect to the cluster
   - execute the following with the aws_key_id and aws_secret_key
 ```bash
-EXPORT AWS_SECRET_KEY=<secret-key>
-EXPORT AWS_ACCESS_KEY_ID=<key-id>
-EXPORT AWS_DEFAULT_REGION=eu-west-1
+export AWS_ACCESS_KEY_ID=<key-id>
+export AWS_SECRET_ACCESS_KEY=<secret>
+export AWS_DEFAULT_REGION=eu-west-1
 aws eks update-kubeconfig --name docker-k8s-kJmwvT
 ```
 - Create a namespace for yourself and make sure to create *all resources in your own namespace* such that you do not impact each other.
-`kubectl create namespace <your-first-name>`
+`kubectl create namespace <your-first-name>
+kubectl config set-context --current --namespace <your-first-name>`
 
 
 ## Content
