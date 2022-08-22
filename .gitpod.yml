@@ -22,9 +22,6 @@ tasks:
       cd && rm -r $tmpdir
     command: exit
 
-image:
-  file: .gitpod.dockerfile
-
 # VS Code settings
 # vscode:
 #   extensions:
