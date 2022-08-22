@@ -13,12 +13,20 @@ More info on installing it can be found here: https://microk8s.io/docs/getting-s
 Unfortunately microk8s cannot be installed on a docker container, so it is also not available through gitpod.
 As a backup I created a kubernetes cluster in my aws account, which we can use for this session.
 
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/datamindedbe/kubernetes_academy_course)
+
 Usage:
 - I will give info on how to connect to the cluster
-- Create a namespace for yourself and make sure to create all resources in your own namespace such that you do not impact each other.
-- Use the following link to open the repo in gitpod:
+  - execute the following with the aws_key_id and aws_secret_key
+```bash
+EXPORT AWS_SECRET_KEY=<secret-key>
+EXPORT AWS_ACCESS_KEY_ID=<key-id>
+EXPORT AWS_DEFAULT_REGION=eu-west-1
+aws eks update-kubeconfig --name docker-k8s-kJmwvT
+```
+- Create a namespace for yourself and make sure to create *all resources in your own namespace* such that you do not impact each other.
+`kubectl create namespace <your-first-name>`
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/datamindedbe/kubernetes_academy_course)
 
 ## Content
 
