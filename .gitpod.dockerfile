@@ -19,6 +19,4 @@ RUN wget https://github.com/derailed/k9s/releases/download/v0.26.3/k9s_Linux_x86
     sudo mv ./k9s /usr/local/bin/k9s && \
     rm -rf k9s.tar.gz
 
-RUN curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 > get_helm.sh && \
-    sudo chmod a+x get_helm.sh && \
-    sudo ./get_helm.sh
+RUN curl -L https://git.io/get_helm.sh | bash -s -- --version v3.8.2
