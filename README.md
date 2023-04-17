@@ -16,14 +16,10 @@ As a backup I created a kubernetes cluster in my aws account, which we can use f
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/datamindedbe/kubernetes_academy_course)
 
 Usage:
-- I will give info on how to connect to the cluster
+- I will give info on how to connect to the cluster (AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY)
+  - run the following command in gitpod: source `./connect_cluster.sh <ACCESS_KEY_ID> <SECRET_ACCESS_KEY> <CLUSTER_NAME>`
   - execute the following with the aws_key_id and aws_secret_key
-```bash
-export AWS_ACCESS_KEY_ID=<key-id>
-export AWS_SECRET_ACCESS_KEY=<secret>
-export AWS_DEFAULT_REGION=eu-west-1
-aws eks update-kubeconfig --name docker-k8s-kJmwvT
-```
+
 - Create a namespace for yourself and make sure to create *all resources in your own namespace* such that you do not impact each other.
 `kubectl create namespace <your-first-name>
 kubectl config set-context --current --namespace <your-first-name>`
