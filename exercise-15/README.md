@@ -1,11 +1,7 @@
-# Using helm charts
+# Kustomize with configmap and secret
 
 ## Steps
-- go to artifacthub.io to see repos + charts (bitnami will be the repo to use)
-- list the charts available on bitnami repo
-- install the postgresql chart in our cluster with yourname-postgresql
-- see what it installed
-- unistall postgresql chart
-- install the chart again with a custom image.tag value (latest)
-- validate it uses a different image tag
-- uninstall the chart again
+- Start from a basic nginx deployment
+- Generate a configmap based on the prometheus yaml file and mount it as a volume
+- Generate a secret based on a env file and mount it as env variables
+- update your secret and configmap and see what happens?
