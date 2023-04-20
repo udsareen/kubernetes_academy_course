@@ -2,7 +2,5 @@
 
 set -x
 
-export AWS_ACCESS_KEY_ID=$1
-export AWS_SECRET_ACCESS_KEY=$2
 export AWS_DEFAULT_REGION=eu-west-1
-aws eks update-kubeconfig --name $3
+aws eks update-kubeconfig --name $1
