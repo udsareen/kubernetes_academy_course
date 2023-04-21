@@ -9,7 +9,7 @@ namespace: niels
 images:
 - name: cat-webapp
   newName: nilli9990/cat-webapp
-  newTag: "1.0"
+  newTag: "1.1"
 
 patchesStrategicMerge:
 - numberReplicas.yaml

@@ -8,4 +8,4 @@
 -- prod environment: 2 instances, nodeport as service in your own namespace with label env:prod
 - Change the tag of the image in both environments
 -- latest tag for dev environment
--- tag 1.0 for prod environment
+-- tag 1.1 for prod environment
