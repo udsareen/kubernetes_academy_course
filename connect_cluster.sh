@@ -10,4 +10,4 @@ else
   CLUSTER_NAME=$1
 fi
 
-aws eks update-kubeconfig --name $1
+aws eks update-kubeconfig --name $CLUSTER_NAME
