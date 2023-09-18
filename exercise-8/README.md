@@ -12,7 +12,24 @@ Make sure your local kubernetes cluster has ingress enabled
 Make sure to change the /etc/hosts with the correct entries such that they are routable
 
 # Eks cluster
-host: <first-username>-cats.k8sacademy.waydata.be
-- rule for path with prefix: /cat0 -> cat0-svc
-- rule for path with prefix /cat1 -> cat1-svc
-Check the status of the ingress resource, make sure the address property is filled in with a random dns record.
+
+## Help specifying your ingress resource
+
+### Required annotations
+```
+nginx.ingress.kubernetes.io/rewrite-target: /
+alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}]'
+alb.ingress.kubernetes.io/scheme: "internet-facing"
+alb.ingress.kubernetes.io/target-type: "ip"
+external-dns.alpha.kubernetes.io/hostname: '<first-username>-cat0.k8sacademy.waydata.be,<first-username>-cat1.k8sacademy.waydata.be'
+```
+For more details on the supported annotations, take a look at the aws load balancer controller: https://kubernetes-sigs.github.io/aws-load-balancer-controller/v2.2/
+
+### Specify ingressClassName
+
+`ingressClassName: "alb"`
+
+## Define the rules
+You must specify two rules that forward an incoming request to the respective service.
+host parameter looks as follows: `<first-username>-cat0.k8sacademy.waydata.be`
+

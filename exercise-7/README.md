@@ -23,4 +23,6 @@ In order to troubleshoot some networking issues, it is best to have a look at th
 - change cat index of deployment and do rolling upgrade
 - refresh clusterIP multiple times
 
+More information on the annotations can be found on the AWS Load balancer controller: https://kubernetes-sigs.github.io/aws-load-balancer-controller/v2.2/
+
 Note: it might take a couple of minutes (2-3min) before the dns record can be resolved. Also the loadbalancer on AWS takes some time to startup
