@@ -9,5 +9,5 @@ namespace: niels
 images:
 - name: cat-webapp
   newName: nilli9990/cat-webapp
-  newTag: latest
+  newTag: "1.0"
 
