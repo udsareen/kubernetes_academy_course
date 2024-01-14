@@ -13,7 +13,7 @@ For this reason I manage a real kubernetes cluster, which is running on AWS, to 
 Usage:
 - I will give the info on how to connect to the cluster (AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY)
   - run the following command in gitpod: `source expose_env_vars.sh <ACCESS_KEY_ID> <SECRET_ACCESS_KEY>`
-  - run then: `./connect_cluster.sh k8s-bn54I8`
+  - run then: `./connect_cluster.sh k8s-24vTxK`
 
 - Create a namespace for yourself and make sure to create *all resources in your own namespace* such that you do not impact each other.
 ```
