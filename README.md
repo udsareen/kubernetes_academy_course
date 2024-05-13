@@ -23,8 +23,9 @@ kubens <select your namespace>
 
 ## Alternative: perform exercises locally
 
-I can recommend microk8s to simulate a k8s cluster on your local machine.
+If you do not have a kubernetes cluster to run against, I can recommend microk8s to simulate a k8s cluster on your local machine.
 More info on installing it can be found here: https://microk8s.io/docs/getting-started
+Some of the exercises work differently locally vs on a real cluster, this is mainly the case for the services, persistent volumes and ingress exercises. 
 
 ## Content
 
