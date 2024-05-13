@@ -21,7 +21,7 @@ nginx.ingress.kubernetes.io/rewrite-target: /
 alb.ingress.kubernetes.io/scheme: "internet-facing"
 alb.ingress.kubernetes.io/target-type: "ip"
 external-dns.alpha.kubernetes.io/hostname: "<first-username>-cat0.k8sacademy.waydata.be,<first-username>-cat1.k8sacademy.waydata.be"
-alb.ingress.kubernetes.io/certificate-arn: "arn:aws:acm:eu-west-1:299641483789:certificate/e8045032-8856-4b88-a773-45bec46915de"
+alb.ingress.kubernetes.io/certificate-arn: "arn:aws:acm:eu-west-1:299641483789:certificate/5329aacf-d233-4409-b6b7-f5ea777c87c9"
 ```
 For more details on the supported annotations, take a look at the aws load balancer controller: https://kubernetes-sigs.github.io/aws-load-balancer-controller/v2.2/
 
