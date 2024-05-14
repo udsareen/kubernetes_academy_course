@@ -3,13 +3,16 @@ kind: Pod
 metadata:
   creationTimestamp: null
   labels:
-    run: nginx
-  name: nginx
+    run: nginxpvc
+  name: nginxpvc
 spec:
   containers:
   - image: nginx
     name: nginx
-    resources: {}
+    livenessProbe:
+      httpGet:
+        port: 80
+    ports:
+    - containerPort: 80
   dnsPolicy: ClusterFirst
   restartPolicy: Always
-status: {}

@@ -33,9 +33,12 @@ In order to troubleshoot some networking issues, it is best to have a look at th
 ```
 - change cat index of deployment and do rolling upgrade
 - refresh clusterIP multiple times
-
+- configure https for your service on port 443 as http traffic is often blocked by firewalls or ruled as insecure by browsers. Use the following code block:
+  ```
+  - name: https
+    port: 443
+    targetPort: 5000
+  ```
 More information on the annotations can be found on the AWS Load balancer controller: https://kubernetes-sigs.github.io/aws-load-balancer-controller/v2.2/
 
 Note: it might take a couple of minutes (2-3min) before the dns record can be resolved. Also the loadbalancer on AWS takes some time to startup
-
-Note2: if you want to use https, you must also specify this port in your service (443) next to port 80

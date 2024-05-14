@@ -34,4 +34,18 @@ Note: if your target-type is instance, your services must be a NodePort as it th
 ## Define the rules
 You must specify two rules that forward an incoming request to the respective service.
 host parameter looks as follows: `<first-username>-cat0.k8sacademy.waydata.be`
-
+Example rules spec section:
+```
+rules:
+    - host: <first-username>-cat0.k8sacademy.waydata.be
+      http:
+        paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: cat0-svc
+              port:
+                number: 80
+```
+Add a similar section for the second rule but with the correct host and service name.
