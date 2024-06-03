@@ -33,5 +33,6 @@ Note: if your target-type is instance, your services must be a NodePort as it th
 
 ## Define the rules
 You must specify two rules that forward an incoming request to the respective service.
-host parameter looks as follows: `<first-username>-cat0.k8sacademy.waydata.be`
+host parameter looks as follows: `<first-username>-cat-<index>.k8sacademy.waydata.be`
 
+An ingress template can be generated using: `kubectl create ingress simple --rule="niels-cat0.k8sacademy.waydata.be/=cat0-svc:80" --class=alb --dry-run=client -o yaml > ingress.yaml`
