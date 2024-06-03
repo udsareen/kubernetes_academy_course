@@ -22,7 +22,7 @@
 
 ### persistent volumes
 On eks I created a storageclass called gp3, which you should use:
-- create a pvc for the gp3 storage class
+- check the content of the `pvc.yaml` file and apply it
   Note: the persistent volume for your pvc is only created after using it in a pod. Before that it remains in the Pending phase
 - use the pvc in your nginx pod (with livenessprobe) and mount the volume under the `/var/log/nginx` directory of the container, which is where the access logs are stored
 - check whether it was successful by running `kubectl exec -it <pod> bash` and run `df -h` to inspect whether the disk was correctly mounted
