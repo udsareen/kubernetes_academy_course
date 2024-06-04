@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2024-06-04T10:59:58Z"
+  labels:
+    app: my-cs
+  name: my-cs
+  namespace: udit
+  resourceVersion: "414079"
+  uid: 30c311e5-1e11-4c11-80d0-0a6dbfc596ea
+spec:
+  clusterIP: 172.20.0.1
+  clusterIPs:
+  - 172.20.0.1
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: 5678-8080
+    port: 5678
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: my-cs
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}

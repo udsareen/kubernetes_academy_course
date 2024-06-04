@@ -3,30 +3,27 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app: my-lbs
-  name: my-lbs
+    app: cat-webapp
+  name: cat-webapp
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: my-lbs
-  strategy:
-    type: RollingUpdate
-    rollingUpdate:
-      maxUnavailable: 1
+      app: cat-webapp
+  strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: my-lbs
+        app: cat-webapp
     spec:
       containers:
       - image: nilli9990/cat-webapp
-        name: my-lbs
-        env:
-        - name: CAT_INDEX
-          value: "1"
+        name: cat-webapp
         ports:
         - containerPort: 5000
+        env:
+        - name: CAT_INDEX
+          value: "3"
         resources: {}
 status: {}

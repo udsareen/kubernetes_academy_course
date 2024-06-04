@@ -1,0 +1,36 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  creationTimestamp: null
+  name: cat-ing
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    alb.ingress.kubernetes.io/scheme: "internet-facing"
+    alb.ingress.kubernetes.io/target-type: "ip"
+    external-dns.alpha.kubernetes.io/hostname: "udit-cat-svc0.k8sacademy.waydata.be,udit-cat-svc1.k8sacademy.waydata.be"
+    alb.ingress.kubernetes.io/certificate-arn: "arn:aws:acm:eu-west-1:299641483789:certificate/5329aacf-d233-4409-b6b7-f5ea777c87c9"
+spec:
+  ingressClassName: "alb"
+  rules:
+  - host: udit-cat-svc0.k8sacademy.waydata.be
+    http:
+      paths:
+      - backend:
+          service:
+            name: cat-svc0
+            port:
+              number: 80
+        path: /
+        pathType: Exact
+  - host: udit-cat-svc1.k8sacademy.waydata.be
+    http:
+      paths:
+      - backend:
+          service:
+            name: cat-svc1
+            port:
+              number: 80
+        path: /
+        pathType: Exact
+status:
+  loadBalancer: {}
