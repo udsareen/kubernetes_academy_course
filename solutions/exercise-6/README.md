@@ -3,7 +3,7 @@
 ## Steps
 
 - create properties file with 2 key-value properties
-  - generate template using: `kubectl create secret generic my-secret --from-literal=username=niels --from-literal=password=secretpw --dry-run=client -o yaml > secret.yaml`
+  - generate template using: `kubectl create cm my-cm --from-literal=key=value --from-literal=otherkey=othervalue --dry-run=client -o yaml > cm.yaml`
 - expose all properties as environment variables in nginx pod
   - use the envFrom property to load all properties in the nginx pod
   ```yaml
