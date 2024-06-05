@@ -1,0 +1,12 @@
+bases:
+  - ../base
+namespace: udit
+commonLabels:
+  env: pro
+images:
+- name: cat-webapp
+  newName: nilli9990/cat-webapp
+  newTag: "1.1"
+patchesStrategicMerge:
+- nr_replicas.yaml
+- new_svc.yaml

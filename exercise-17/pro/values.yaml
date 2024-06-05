@@ -1,0 +1,11 @@
+replicaCount: 1
+
+image:
+  repository: nilli9990/cat-webapp
+  tag: 1.0
+
+envLabel: pro
+
+service:
+  type: NodePort
+  nodePort: 5000

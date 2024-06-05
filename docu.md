@@ -1,0 +1,2 @@
+- https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#create
+- https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.30/#poddisruptionbudget-v1-policy

@@ -1,0 +1,10 @@
+replicaCount: 1
+
+image:
+  repository: nilli9990/cat-webapp
+  tag: latest
+
+envLabel: dev
+
+service:
+  type: ClusterIP

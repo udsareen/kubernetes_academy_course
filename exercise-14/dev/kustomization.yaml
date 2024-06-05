@@ -1,0 +1,9 @@
+bases:
+  - ../base
+namespace: udit
+commonLabels:
+  env: dev
+images:
+- name: cat-webapp
+  newName: nilli9990/cat-webapp
+  newTag: "1.0"
